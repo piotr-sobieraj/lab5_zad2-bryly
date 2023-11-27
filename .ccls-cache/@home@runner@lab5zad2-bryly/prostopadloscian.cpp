@@ -1,6 +1,10 @@
 #include "prostopadloscian.h"
 
-Prostopadloscian::Prostopadloscian(const int a, const int b, const int c) : dlugosc(a), szerokosc(b), wysokosc(c){
+Prostopadloscian::Prostopadloscian(const double a, const double b, const double c) : dlugosc(a), szerokosc(b), wysokosc(c){
+
+    if(a < 0 || b < 0 || c < 0)
+        throw std::invalid_argument("Długości muszą być liczbami dodatnimi!");
+    
     ustaw_objetosc();
     ustaw_pole_powierzchni();
 }
