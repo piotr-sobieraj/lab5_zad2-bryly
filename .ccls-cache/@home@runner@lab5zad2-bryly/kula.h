@@ -11,5 +11,7 @@ class Kula : Bryla{
     Kula(const double); 
     ~Kula();
 
+    void zmian_promien(const double);
+
     friend std::ostream& operator << (std::ostream&, const Kula&);
 };

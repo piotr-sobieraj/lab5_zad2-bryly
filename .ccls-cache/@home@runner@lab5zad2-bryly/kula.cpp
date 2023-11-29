@@ -24,6 +24,13 @@ void Kula::ustaw_pole_powierzchni(){
     pole_powierzchni =  4.* M_PI * promien * promien;
 }
 
+void Kula::zmian_promien(const double nowy_promien){
+    promien = nowy_promien;
+
+    ustaw_objetosc();
+    ustaw_pole_powierzchni();
+}
+
 
 std::ostream& operator << (std::ostream& wyjscie, const Kula& k){
 
