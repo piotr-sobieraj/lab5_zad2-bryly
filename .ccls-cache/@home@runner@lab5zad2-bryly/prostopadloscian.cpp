@@ -1,5 +1,5 @@
 #include "prostopadloscian.h"
-#include "wejscie.h"
+#include "wprowadzanie_danych.h"
 
 Prostopadloscian::Prostopadloscian(const double a, const double b, const double c) : dlugosc(a), szerokosc(b), wysokosc(c){
 
@@ -26,7 +26,7 @@ void Prostopadloscian::ustaw_pole_powierzchni() {
 }
 
 
-void Prostopadloscian::wczytaj_i_zmien_dlugosci_krawedzi(Prostopadloscian& p){
+void Prostopadloscian::wczytaj_i_zmien_dlugosci_krawedzi(){
     double dlugosc, szerokosc, wysokosc;
     
     do{
@@ -34,11 +34,11 @@ void Prostopadloscian::wczytaj_i_zmien_dlugosci_krawedzi(Prostopadloscian& p){
     }while (!wczytaj_dodatnia_double(dlugosc));
 
     do{
-        std::cout << "Podaj nową szerokość: ";
+        std::cout << "\nPodaj nową szerokość: ";
     }while (!wczytaj_dodatnia_double(szerokosc));
 
     do{
-        std::cout << "Podaj nową wysokość: ";
+        std::cout << "\nPodaj nową wysokość: ";
     }while (!wczytaj_dodatnia_double(wysokosc));  
 
     zmien_dlugosci_krawedzi(dlugosc, szerokosc, wysokosc);

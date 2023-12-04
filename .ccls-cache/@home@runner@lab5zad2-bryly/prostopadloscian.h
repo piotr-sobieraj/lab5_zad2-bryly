@@ -16,7 +16,7 @@ public:
     void ustaw_objetosc() override;
     void ustaw_pole_powierzchni() override;
 
-    void wczytaj_i_zmien_dlugosci_krawedzi(Prostopadloscian&);
+    void wczytaj_i_zmien_dlugosci_krawedzi();
 
     friend std::ostream& operator << (std::ostream&, const Prostopadloscian&);
 };

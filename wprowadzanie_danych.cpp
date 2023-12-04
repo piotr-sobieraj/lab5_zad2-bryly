@@ -1,4 +1,4 @@
-#include "wejscie.h"
+#include "wprowadzanie_danych.h"
 
 //Sprawdza, czy podany ciąg znaków został poprawnie przekonwertowany na double; przekonwertowana wartość przekazywana jest przez drugi parametr
 bool czy_poprawna_double(const std::string& wejscie, double &wynik) {
