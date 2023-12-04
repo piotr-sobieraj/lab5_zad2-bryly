@@ -27,7 +27,8 @@ int main() {
     p1.wczytaj_i_zmien_dlugosci_krawedzi();
     std::cout << std::endl << std::endl << p1 << std::endl;
 
-    getchar();
-
+    std::cout << "\n\nNaciśnij dowolny klawisz, aby wywołać destruktory i zakończyć działanie programu.";
+    std::cin.ignore(100, '\n');
+    std::cin.get();
     return 0;    
 }
