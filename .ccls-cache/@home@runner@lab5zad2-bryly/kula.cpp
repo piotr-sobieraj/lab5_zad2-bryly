@@ -34,9 +34,7 @@ void Kula::zmian_promien(const double nowy_promien){
 
 std::ostream& operator << (std::ostream& wyjscie, const Kula& k){
 
-    wyjscie << "*** Kula ***\n"; 
-    wyjscie << "r = " << k.promien;
-    wyjscie << ", pole pow. = " << k.pole_powierzchni << ", obj. = " << k.objetosc;
+    wyjscie << "Kula(" << k.promien << ", pole pow. = " << k.pole_powierzchni << ", obj. = " << k.objetosc << ")";
     
     return wyjscie;
 }

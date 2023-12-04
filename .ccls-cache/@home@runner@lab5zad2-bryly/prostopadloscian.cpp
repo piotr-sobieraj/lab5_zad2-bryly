@@ -1,4 +1,5 @@
 #include "prostopadloscian.h"
+#include "wejscie.h"
 
 Prostopadloscian::Prostopadloscian(const double a, const double b, const double c) : dlugosc(a), szerokosc(b), wysokosc(c){
 
@@ -25,10 +26,30 @@ void Prostopadloscian::ustaw_pole_powierzchni() {
 }
 
 
+void Prostopadloscian::wczytaj_i_zmien_dlugosci_krawedzi(Prostopadloscian& p){
+    double dlugosc, szerokosc, wysokosc;
+    
+    do{
+        std::cout << "\nPodaj nową długość: ";
+    }while (!wczytaj_dodatnia_double(dlugosc));
+
+    do{
+        std::cout << "Podaj nową szerokość: ";
+    }while (!wczytaj_dodatnia_double(szerokosc));
+
+    do{
+        std::cout << "Podaj nową wysokość: ";
+    }while (!wczytaj_dodatnia_double(wysokosc));  
+
+    zmien_dlugosci_krawedzi(dlugosc, szerokosc, wysokosc);
+}
+
+
 void Prostopadloscian::zmien_dlugosci_krawedzi(
                             const double nowa_dlugosc, 
                             const double nowa_szerokosc,
                             const double nowa_wysokosc){
+    
     dlugosc = nowa_dlugosc;
     szerokosc = nowa_szerokosc;
     wysokosc = nowa_wysokosc;
@@ -39,7 +60,6 @@ void Prostopadloscian::zmien_dlugosci_krawedzi(
 
 
 std::ostream& operator << (std::ostream& wyjscie, const Prostopadloscian& p){
-    wyjscie << " *** Prostopadłościan *** \n";
-    wyjscie << "x = " << p.dlugosc << ", y = " << p.szerokosc << ", z = " << p.wysokosc << ", pole pow. = " << p.pole_powierzchni << ", obj. = " << p.objetosc;
+    wyjscie << "Prostopadłościan(" << p.dlugosc << ", " << p.szerokosc << ", " << p.wysokosc << ", pole pow. = " << p.pole_powierzchni << ", obj. = " << p.objetosc << ")";
     return wyjscie;
 }
